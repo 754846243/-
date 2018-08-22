@@ -1,0 +1,50 @@
+<header>
+  <div *ngIf="level">
+    <img class="main-title" src="../../assets/fonts/siji.png">
+    <img class="sub-title" src="../../assets/fonts/Level4.png">
+  </div>
+  <div *ngIf="!level">
+      <img class="main-title" src="../../assets/fonts/liuji.png">
+      <img class="sub-title" src="../../assets/fonts/Level6.png">
+  </div>
+</header>
+<div class="container">
+  <div class="score summary">
+    <div class="total">
+      <img src="../../assets/image/score-icon.png">
+      总分：{{score.total}}
+    </div>
+    <div class="is-pass">
+      <img src="../../assets/image/state-icon.png">      
+      状态：{{isPass ? '通过': '未通过'}}
+    </div>
+  </div>
+  <div class="score detail">
+    <li *ngFor="let item of score.detail">
+      <span>{{item.name}}</span>
+      <div class="border"></div>
+      <span>{{item.score}}</span>
+    </li>
+  </div>
+</div>
+<div class="btn-container">
+  <span class="gab"></span>
+  <span class="btn btn-one" [routerLink]="['/statistics']">
+    <span>历史记录</span>
+  </span>
+  <span class="gab"></span>  
+  <span *ngIf="isPass" (click)="onShare()" class="btn btn-two">
+    <span>炫耀一下</span>
+  </span>
+  <span *ngIf="!isPass" class="btn btn-two" [routerLink]="['/skill']">
+    <span>通过技巧</span>
+  </span>
+  <span class="gab"></span>  
+</div>
+<ng-template [ngIf]="isShared">
+  <app-popup (emitCancel)="onShare()">
+    <span>
+        &nbsp;&nbsp;&nbsp;&nbsp;手机截图本页面发送至QQ空间、微信朋友圈，享受双倍快乐
+    </span>
+  </app-popup>
+</ng-template>

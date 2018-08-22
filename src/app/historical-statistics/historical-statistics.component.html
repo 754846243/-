@@ -1,0 +1,67 @@
+<span class="return" [routerLink]="['/score']">
+  <img src="../../assets/image/renturn.png">
+</span>
+<img class="main-title" src="../../assets/fonts/shujvtongji.png">
+<div class="swiper-container" [swiper]='config'>
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <div class="box1">
+        <div class="level" *ngIf="isPass && type">
+          <!-- 四级且通过考试 -->
+          <img src="../../assets/image/cet-4_pass.png">
+        </div>
+        <div class="level" *ngIf="!isPass && type">
+          <!-- 四级且不通过考试 -->
+          <img src="../../assets/image/cet-4_nopass.png">
+        </div>
+        <div class="level" *ngIf="isPass && !type">
+          <!-- 六级且通过考试 -->
+          <img src="../../assets/image/cet-6_pass.png">
+        </div>
+        <div class="level" *ngIf="!isPass && !type">
+          <!-- 六级且不通过考试 -->
+          <img src="../../assets/image/cet-6_nopass.png">
+        </div>
+        <p class="rangking">当前已经有
+          <span class="data">{{totalNumber}}</span>
+          个同学查询了成绩
+        </p>
+        <p class="rangking">您已经超过了
+          <span class="data">{{percent + '%'}}</span>的人
+        </p>
+        <p class="rangking">当前称号：
+          <span class="data">{{level}}</span>
+        </p>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div *ngIf="!warning" class="box1">
+        <img src="../../assets/fonts/liniansijitongugolv.png" alt="历年四级通过率" class="title">
+        <div echarts [options]="passingRateOption4" class="box"></div>
+        <img src="../../assets/fonts/liniansijikaoshifenshu.png" alt="历年四级考试分数" class="title">
+        <div echarts [options]="scoreOpiton4" class="box"></div>
+        <img src="../../assets/fonts/linianshoucitongguorenshu.png" alt="历年首次通过人数" class="title">
+        <div echarts [options]="passingNumberOption4" class="box"></div>
+        <div class="placeholder"></div>
+      </div>
+      <div class="warning" *ngIf="warning">
+        <p>{{warning}}</p>
+      </div>
+    </div>
+    <div *ngIf="!warning" class="swiper-slide">
+      <div class="box1">
+        <img src="../../assets/fonts/linianliujitongugolv.png" alt="历年六级通过率" class="title">
+        <div echarts [options]="passingRateOption6" class="box"></div>
+        <img src="../../assets/fonts/linianliujikaoshifenshu.png" alt="历年六级考试分数" class="title">
+        <div echarts [options]="scoreOpiton6" class="box"></div>
+        <img src="../../assets/fonts/linianshoucitongguorenshu.png" alt="历年首次通过人数" class="title">
+        <div echarts [options]="passingNumberOption6" class="box"></div>
+        <div class="placeholder"></div>
+      </div>
+    </div>
+    <div class="warning" *ngIf="warning">
+      <p>{{warning}}</p>
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+</div>

@@ -1,0 +1,60 @@
+<div class="container">
+  <header>
+    <img class="stars" src="../../assets/image/stars.png">
+    <div class="title">
+      <img class="main-title" src="../../assets/fonts/siliujichengjichauxn.png">
+      <img class="sub-title" src="../../assets/fonts/Level4and6.png">
+    </div>
+  </header>
+  <form class="container" [formGroup]="form">
+    <div class="input-container">
+      <span class="icon">
+        <img class="id-card-icon" src="../../assets/image/id-card-icon.png">
+      </span>
+      <input formControlName="cetNum" type="text" placeholder="输入你的准考证号">
+    </div>
+    <div class="input-container second">
+      <span class="icon">
+        <img class="name-icon" src="../../assets/image/name-icon.png">        
+      </span>
+      <input formControlName="name" type="text" placeholder="输入你的姓名">
+    </div>
+    <div (click)="onSubmit()" class="btn">
+      <span>查询</span>
+      <img class="circle" src="../../assets/image/suspension.png">
+    </div>
+  </form>
+</div>
+<ng-template [ngIf]="information">
+  <app-popup (emitCancel)="onCancel()">
+    {{information}}
+  </app-popup>
+</ng-template>
+<ng-template [ngIf]="showVerificationCode">
+    <!-- identifyingImg -->
+  <div class="popupWindow">
+    <img (click)="cancelVerificationCode()" class="cancel" src="../../assets/image/cancel.png">
+    <p class="hint">请输入验证码</p>
+    <p *ngIf="showWarning && !identifyingCode" class="warning">验证码错误或其他原因</p>
+    <div class="input">
+      <span class="icon">
+        <img class="name-icon" src="../../assets/image/identifying-code-icon.png">        
+      </span>
+      <input [(ngModel)]="identifyingCode" type="text">
+    </div>
+    <img class="identifying-img" [src]="identifyingImg">
+    <div class="button" (click)="onSubmitIdentifyingCode()">
+      <p>确认</p>
+    </div>
+  </div>
+  <div class="cover"></div>
+</ng-template>
+
+<ng-template [ngIf]="remainingHours > 0">
+  <div class=" tellTime">
+    <p>小家园为您报时:</p>
+    <p>现在是<span class="data">{{date}}</span></p>
+    <p>离四六级成绩查询入口开放只有<span class="data">{{remainingHours}}</span>分钟了</p>
+  </div>
+  <div class="cover"></div>
+</ng-template>

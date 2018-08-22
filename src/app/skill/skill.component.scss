@@ -1,0 +1,82 @@
+.return {
+  position: absolute;
+  left: 0.27rem;
+  top: 0.8rem;
+}
+
+.return img {
+  width: 0.3rem;
+}
+
+.main-title {
+  width: 4.747rem;
+  margin-top: 0.7rem;
+  margin-left: 1rem;
+}
+
+.sub-title {
+  height: 0.48rem;
+  margin-left: 1.1rem;
+  margin-top: 0.68rem;
+}
+
+.swiper-container {
+  width: 10rem;
+}
+
+.swiper-pagination {
+  position: fixed;
+  bottom: 0.667rem;
+}
+
+.placeholder {
+  width: 10rem;
+  height: 1.9rem;
+}
+
+.container {
+  width: 10rem;
+}
+
+.box {
+  width: 8.347rem;
+  padding: 0.533rem 0.267rem;
+  margin-top: 0.83rem;
+  border-radius: 0.37rem;
+  box-shadow: 0px -0.5px 10px #f4f6fc, 2px 0px 20px #edf0f9, 0px 6px 38px #e7ebf7, -2px 0px 20px #edf0f9;
+  background: #fcfdff;
+}
+
+.slider {
+  height: 7.92rem;
+  overflow: scroll;
+}
+
+.box h3 {
+  font-size: 0.48rem;
+  font-weight: 800;
+}
+
+.box h4 {
+  display: inline;
+  line-height: 2;
+  margin-left: 0.8rem;
+  font-size: 0.4rem;
+  font-weight: 600;
+}
+
+.box p {
+  display: inline;
+  line-height: 2;
+  font-size: 0.4rem;
+}
+
+.slider h4, .slider p {
+  display: block;
+  margin-left: 0;
+}
+
+.slider h5 {
+  line-height: 2;
+  font-size: 0.4rem;
+}

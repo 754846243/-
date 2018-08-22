@@ -1,0 +1,35 @@
+@import '~swiper/dist/css/swiper.css';
+
+html {
+  background: #fbfcff;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  color: #7b90cf
+}
+
+div {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fbfcff;
+}
+
+.main-title {
+  color: #7b90cf;
+}
+
+.sub-title {
+  color: #c5cde7;
+}

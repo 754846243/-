@@ -1,0 +1,199 @@
+.btn {
+  margin-top: 2.19rem;
+  width: 5.84rem;
+  display: inline-flex;
+  background: #f7767f;
+  height: 1.12rem;
+  color: #ffffff;
+  border-radius: 1.12rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.453rem;
+  box-shadow: 0px 6px 21px #fbc3c1;
+}
+
+.title {
+  margin-left: 1rem;
+}
+
+.main-title{
+  margin-top: 1.92rem;
+  width: 7.3rem;
+}
+
+
+.sub-title {
+  margin-top: 0.667rem;
+  margin-bottom: 1.49rem;
+  width: 4.36rem;
+}
+
+.input-container {
+  display: flex;
+  width: 8.62rem;
+  height: 1.4rem;
+  border-radius: 0.7rem;
+  background: #fcfdff;
+  box-shadow: 0px -0.5px 4px #f4f6fc,2px 0px 10px #edf0f9,0px 6px 19px #e7ebf7,-2px 0px 10px #edf0f9;
+  border-radius: 0.37rem;
+}
+
+.input-container.second {
+  margin-top: 0.67rem;
+}
+
+.input-container span {
+  width: 2.56rem;
+  flex: 0 0 2.56rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-container input {
+  flex: 1;
+  color: #7b90cf;
+  height: 100%;
+  border: none;
+  font-size: 0.373rem;
+  border-radius: 0.7rem;
+  background: #fcfdff;
+}
+
+.input-container input::-webkit-input-placeholder {
+  color: #7b90cf;
+  font-size: 0.373rem;
+}
+
+.id-card-icon {
+  height: 0.453rem;
+}
+
+.name-icon {
+  height: 0.56rem;
+}
+
+.circle {
+  position: absolute;
+  height: 5.53rem;
+  width: 6.28rem;
+  margin-top: 0.613rem; margin-left: -0.32rem;
+}
+
+.stars {
+  position: absolute;
+  width: 4.13rem;
+  height: 3.12rem;
+  right: 0.8rem;
+  top: 1.16rem;
+}
+
+.popupWindow {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  text-align: center;
+  border-radius: 0.54rem;
+  top: 50%; transform: translateY(-50%);
+  left: 50%; margin-left: -2.72rem;
+  color: #7b90cf;
+  font-size: 0.48rem;
+  width: 5.44rem;
+  background: #fcfdff;
+}
+
+.popupWindow p {
+  font-size: 0.4rem;
+}
+
+.popupWindow .hint {
+  margin-top: 0.267rem;
+}
+
+.popupWindow .warning {
+  font-size: 12px;
+  color: red;
+  position: absolute;
+  margin-top: 1rem;
+  margin-left: 0.1rem;
+}
+
+
+.popupWindow span {
+  text-align: left;
+}
+
+.popupWindow span p {
+  display: inline-block;
+}
+
+.popupWindow .identifying-img {
+  margin-top: 0.37rem;
+  width: 3.65rem;
+}
+
+.cover {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba($color: #000000, $alpha: 0.5)
+}
+
+.cancel {
+  position: absolute;
+  top: 0.45rem;
+  right: 0.45rem;
+  width: 0.36rem;
+}
+
+.input {
+  display: flex;
+  margin-top: 0.547rem;
+  width: 3.65rem;
+  border-bottom: 1px solid #778ac5;
+}
+
+.input img {
+  margin-left: 0.3rem;
+}
+
+.input input {
+  width: 2.75rem;
+  border: none;
+  color: #7b90cf;
+  font-size: 0.4rem;
+}
+
+.popupWindow .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.3rem; margin-bottom: 0.387rem;
+  background: #ffffff;
+  height: 0.8rem;
+  width: 1.53rem;
+  border-radius: 0.4rem;
+  box-shadow: 0px 6px 21px #f5f8fc;
+}
+
+.tellTime {
+  position: fixed;
+  font-size: 0.42rem;
+  display: inline-block;
+  width: 8rem;
+  padding: 20px 10px;
+  border-radius: 10px;
+  background: #ffffff;
+  z-index: 3;
+  top: 50%; transform: translateY(-50%);
+  left: 50%; margin-left: -4rem;
+}
+
+.tellTime .data {
+  color: #fe6868;
+  font-size: 0.48rem;
+}
